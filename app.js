@@ -21,14 +21,9 @@ app.get('/:method/:city',(req,res,err)=>{
         method:'GET',
         uri:`http://api.weatherbit.io/v2.0/${req.params.method}${(req.params.method=='forecast'?('/hourly'):(''))}?city=${req.params.city}&key=${APIKey2}`
     },(err,re,data)=>{
-        switch(req.params.method){
-            case 'current':
-                    res.send(pjson.render(JSON.parse(data).data[0]))
-                    break;
-            case 'forecast':
-                    res.send(pjson.render(JSON.parse(data).data[0]))
-                    break;
-        }
+       
+        res.send(pjson.render(JSON.parse(data).data[0]))
+      
         
     })  
 })
