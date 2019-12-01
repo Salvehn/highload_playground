@@ -27,6 +27,6 @@ app.get('/:method/:city',(req,res,err)=>{
         
     })  
 })
-app.listen(port,'127.0.0.1',()=>{
+app.listen(port,()=>{
     console.log('listening on port: '+port)
 })
