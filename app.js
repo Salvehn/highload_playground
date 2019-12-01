@@ -3,7 +3,7 @@ const express=require('express')
 const bodyParser=require('body-parser')
 const app = express();
 const shell = require('shelljs');
-shell.env["PORT"] = "4050";
+shell.env["PORT"] = "80";
 const pjson = require('prettyjson');
 const port = process.env.PORT ;
 app.use(bodyParser.json());
