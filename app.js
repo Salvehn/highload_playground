@@ -10,6 +10,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 const APIKey='96334996f55e14f3b68619156d20d55d'
 const APIKey2='c53e7e5e816246aca797e5cffde5d5fb'
+app.use(require('express-status-monitor')());
 app.get('/',function(req,res,err){
     console.log('root')
   res.send(JSON.stringify({description:'Available metods: - current/{cityname} \n - forecast/{cityname}'}))
